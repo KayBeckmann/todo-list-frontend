@@ -1,0 +1,28 @@
+.body {
+  height: 100dvh;
+  width: 100dvw;
+  background-color: darkslategrey;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card {
+  background-color: lightgray;
+  height: 400px;
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: black;
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin: 5px;
+    width: 250px;
+  }
+}
