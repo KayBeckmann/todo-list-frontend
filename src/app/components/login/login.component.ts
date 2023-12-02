@@ -1,4 +1,5 @@
 import { Component } from "@angular/core";
+import { Router } from "@angular/router";
 import { AuthService } from "src/app/services/auth.service";
 
 @Component({
@@ -10,7 +11,7 @@ export class LoginComponent {
   username: string = "";
   password: string = "";
 
-  constructor(private as: AuthService) {}
+  constructor(private as: AuthService, private router: Router) {}
 
   ngOnInit(): void {}
 
