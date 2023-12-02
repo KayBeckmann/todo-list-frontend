@@ -20,10 +20,12 @@ export class LoginComponent {
    */
   async login() {
     try {
-      let resp = this.as
+      let resp = await this.as
         .loginWithUsernameAndPassword(this.username, this.password)
         .then((user: any) => localStorage.setItem("token", user.token));
+      this.router.navigateByUrl("todos");
     } catch (error) {
+      alert("LOGIN FEHLGESCHLAGEN");
       console.error(error);
     }
   }
