@@ -2,6 +2,9 @@ import { HttpClient } from "@angular/common/http";
 import { Component } from "@angular/core";
 import { environment } from "src/environments/environment";
 import { lastValueFrom } from "rxjs";
+import { MatSlideToggleModule } from "@angular/material/slide-toggle";
+import { MatCardModule } from "@angular/material/card";
+import { ThemePalette } from "@angular/material/core";
 
 @Component({
   selector: "app-all-todos",
@@ -10,6 +13,9 @@ import { lastValueFrom } from "rxjs";
 })
 export class AllTodosComponent {
   todos: any = [];
+  color: ThemePalette = "accent";
+  checked = false;
+  disabled = false;
 
   constructor(private http: HttpClient) {}
 

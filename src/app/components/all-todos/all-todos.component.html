@@ -1,8 +1,16 @@
-<div class="wrapper">
-  <ul>
-    <li *ngFor="let todo of todos">
-      {{ todo.title }}: {{ todo.created_at }}
-      <input type="checkbox" [checked]="todo.checked" />
-    </li>
-  </ul>
-</div>
+<mat-card *ngFor="let todo of todos" class="result">
+  <mat-card-content>
+    <h2 class="example-h2">{{ todo.title }}</h2>
+
+    <section class="example-section">
+      <mat-slide-toggle
+        class="example-margin"
+        [color]="color"
+        [checked]="false"
+        [disabled]="disabled"
+      >
+        Slide me!
+      </mat-slide-toggle>
+    </section>
+  </mat-card-content>
+</mat-card>
